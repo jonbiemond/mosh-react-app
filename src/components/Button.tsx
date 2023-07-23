@@ -1,9 +1,7 @@
-import React from "react";
-
 interface Props {
   children: string;
   color?: "primary" | "secondary" | "danger";
-  onClick: (name: string) => void;
+  onClick: (name: string, state: boolean) => void;
 }
 
 const Button = ({ children, onClick, color = "primary" }: Props) => {
@@ -12,7 +10,7 @@ const Button = ({ children, onClick, color = "primary" }: Props) => {
       type="button"
       className={"btn btn-" + color}
       onClick={() => {
-        onClick(children);
+        onClick(children, true);
       }}
     >
       {children}
