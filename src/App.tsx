@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ListGroup, Alert, Button } from "./components";
 import "./App.css";
+import { BsCalendarDate } from "react-icons/bs";
 
 function App() {
   const [alertVisible, setAlertVisible] = useState(false);
@@ -21,6 +22,9 @@ function App() {
         heading={"Cities"}
         onSelectItem={(item) => console.log(item)}
       ></ListGroup>
+      <div>
+        <BsCalendarDate color="blue" />
+      </div>
     </>
   );
 }
