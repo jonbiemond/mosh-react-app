@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const List = styled.ul`
   list-style: none;
@@ -12,7 +12,7 @@ interface ListItemProps {
 
 const ListItem = styled.li<ListItemProps>`
   padding: 5px 0;
-  background: ${ props => props.active ? 'blue' : 'none' };
+  background: ${(props) => (props.active ? "blue" : "none")};
 `;
 
 interface Props {

@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { ListGroup, Alert, Button } from "./components";
+import { ListGroup, Alert, Button, Like } from "./components";
 import "./App.css";
-import { BsCalendarDate } from "react-icons/bs";
 
 function App() {
   const [alertVisible, setAlertVisible] = useState(false);
@@ -23,7 +22,7 @@ function App() {
         onSelectItem={(item) => console.log(item)}
       ></ListGroup>
       <div>
-        <BsCalendarDate color="blue" />
+        <Like onClick={() => console.log("clicked")} />
       </div>
     </>
   );
